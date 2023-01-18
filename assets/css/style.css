@@ -1,4 +1,4 @@
-/* The Following code is written by Dhruv Arora (github.com/itsdhruvarora) */
+/* The Following code is written by Akash kumar (github.com/akashkumar220011) */
 /* set size of root element */
 
 html {
@@ -22,7 +22,7 @@ body {
 
 .main-container {
     height: 100vh;
-    background-color: #0C1126;
+    background-color: #8f9fe1;
     overflow-y: auto;
 }
 
@@ -44,17 +44,93 @@ body {
     width: 18%;
 }
 
-.logo img {
-    width: auto;
-    height: 61px;
-    border-radius: 2.5rem;
-    margin-right: 0.8rem;
-    max-height: 6rem;
-    max-width: 18rem;
-}
+
+  
+  
+  
+  .link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+  }
+  
+  a {
+    font-family: "Bungee", cursive;
+    font-size: 2.5em;
+  }
+  
+  .link-two {
+    color: #f27b9b;
+    transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+  }
+  
+  .link-two:hover {
+    color: rgb(70, 220, 187);
+    transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  
+  .link-two::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    clip-path: polygon(
+      0% -20%,
+      100% -30%,
+      100% -10%,
+      0% 0%,
+      0% 130%,
+      100% 120%,
+      100% 100%,
+      0% 110%
+    );
+    background-color: #f27b9b;
+  
+    transition: clip-path 1s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  .link-two:hover::before {
+    clip-path: polygon(
+      0% 10%,
+      100% 0%,
+      100% 20%,
+      0% 30%,
+      0% 100%,
+      100% 90%,
+      100% 70%,
+      0% 80%
+    );
+  }
+  
+  .link-two::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 8ch;
+    height: 8ch;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(0deg) scale(0);
+    transition: transform 1s ease;
+  
+    background-color: #f27b9b;
+  }
+  
+  .link-two:hover::after {
+    transform: translate(50%, -50%) rotate(135deg) scale(1);
+  }
+  
+  
 
 .fav {
-    color: #CECFD3;
+    color: #93c38e;
     font-size: 0.9rem;
     font-weight: 600;
     margin-left: 30px;
@@ -71,7 +147,7 @@ body {
     padding: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    background-color: #12183F;
+    background-color: #b8c05f;
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
@@ -90,7 +166,7 @@ body {
     border: 0;
     margin-left: 0.3rem;
     margin-right: 0.3rem;
-    color: white;
+    color: rgb(194, 94, 94);
 }
 
 .search-box input:focus {
@@ -110,7 +186,7 @@ body {
 }
 
 .bell {
-    color: #E7E7E6;
+    color: #da1313;
     margin-right: 50px;
 }
 
@@ -139,7 +215,7 @@ main {
     transition: 0.3s;
 }
 .nav-link .active{
-    color:#1dd65f;
+    color:#61f7e3;
 }
 .nav-text{
     padding-left: 18px;
@@ -169,10 +245,10 @@ main {
 .nav-link:hover a span{
     padding-left: 30px;
     transition: all 0.5s ease;
-    color:#1dd65f;
+    color:#eaa2a2;
 }
 .nav-link:hover i{
-    color:#1dd65f;
+    color:#d61dae;
     -webkit-animation: nextarrow 1s infinite;
     -moz-animation: nextarrow 1s infinite;
     -o-animation: nextarrow 1s infinite;
@@ -261,7 +337,7 @@ input[type=radio] {
    #s3:checked ~ #slide3,
     #s4:checked ~ #slide4,
      #s5:checked ~ #slide5 {
-   box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+   box-shadow: 0 13px 26px rgba(216, 85, 85, 0.914), 0 12px 6px rgba(231, 102, 102, 0.908);
    transform: translate3d(0%, 0, 0px);
  }
  
@@ -350,7 +426,7 @@ input[type=radio] {
     overflow: hidden;
     top: 1.5rem;
     left: -4rem;
-    background-color: white;
+    background-color: rgb(225, 116, 116);
     text-align: center;
     transition: all 0.2s linear;
 }
@@ -388,7 +464,7 @@ input[type=radio] {
 .queue-element {
     margin-bottom: 0.6rem;
     width: 100%;
-    background-color: #1e222e98;
+    background-color: #415283f0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -436,27 +512,27 @@ input[type=radio] {
     position: absolute;
     height: 0;
     overflow: hidden;
-    color: white;
+    color: rgb(218, 46, 33);
     top: 1rem;
     left: 1rem;
 }
 
 .queue-song-name {
     font-size: 0.9rem;
-    color: #F6F7F9;
+    color: #fa71bc;
 }
 
 .queue-artist-name {
     font-size: 0.9rem;
-    color: #8A909D;
+    color: #ece3e9;
 }
 
 .wishlist-icon {
-    color: #92A6B3;
+    color: #65b4e9;
 }
 
 .currently-on-song {
-    color: #21B6D9;
+    color: #e21313;
     transform: rotate(-90deg);
     margin-right: 0.9rem;
 }
@@ -569,12 +645,12 @@ input[type=radio] {
 }
 
 .more-details {
-    color: #93A9B2;
+    color: #28e72e;
     font-size: 0.8rem;
 }
 
 .time {
-    color: #8D8C93;
+    color: #d2e12a;
     font-size: 0.6rem;
 }
 
@@ -941,7 +1017,7 @@ footer {
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background-color: #454545;
+    background-color: #eec270;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -981,7 +1057,7 @@ footer {
 }
 
 .subtitle {
-    color: #C0C0C0;
+    color: #8e76f0;
     font-size: 0.9rem;
     margin: 0.1rem;
 }
